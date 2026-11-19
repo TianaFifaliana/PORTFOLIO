@@ -13,9 +13,9 @@ function App() {
   const activeId = useActiveSection(navItems.map((n) => n.id))
 
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-paper text-ink">
+    <div className="relative min-h-screen overflow-x-clip bg-midnight text-silver">
       <Navbar activeId={activeId} />
-      <main>
+      <main className="relative">
         <Hero />
         <About />
         <Stack />
