@@ -80,7 +80,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet PharmaGest. Documentez les fonctionnalités, le rôle et les choix techniques vérifiés dès qu’ils seront disponibles.',
     tags: [],
-    accent: 'from-violet/25 via-electric/10 to-transparent',
+    accent: 'from-white/12 via-white/5 to-transparent',
   },
   {
     id: 'delivery-app',
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails de l’application de livraison. Remplacez ce texte par les parcours, contributions et résultats confirmés.',
     tags: [],
-    accent: 'from-electric/25 via-sky-400/5 to-transparent',
+    accent: 'from-white/15 via-white/5 to-transparent',
   },
   {
     id: 'apprencontre',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet AppRencontre. Ajoutez ici le contexte produit vérifié et les points forts de la réalisation.',
     tags: [],
-    accent: 'from-violet/20 via-electric/10 to-transparent',
+    accent: 'from-white/10 via-white/5 to-transparent',
   },
   {
     id: 'smartfokontany',
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet SmartFokontany. Précisez les objectifs, les parties prenantes et le périmètre de la solution dès validation.',
     tags: [],
-    accent: 'from-electric/30 via-violet/10 to-transparent',
+    accent: 'from-white/15 via-white/5 to-transparent',
   },
   {
     id: 'tantsahaconnect',
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet TantsahaConnect. Ajoutez les cas d’usage vérifiés, les notes d’architecture et l’impact après confirmation.',
     tags: [],
-    accent: 'from-emerald-400/10 via-electric/10 to-transparent',
+    accent: 'from-white/10 via-white/5 to-transparent',
   },
   {
     id: 'reservsalle',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet ReservSalle. Remplacez ce texte par les besoins validés, les détails d’implémentation et les résultats.',
     tags: [],
-    accent: 'from-electric/25 via-violet/5 to-transparent',
+    accent: 'from-white/15 via-white/5 to-transparent',
   },
 ]
 

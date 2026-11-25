@@ -22,7 +22,7 @@ export function Journey() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: reduce ? 0 : 1.3, ease: easeOut }}
           style={{ originY: 0 }}
-          className="timeline-glow absolute left-3 top-0 hidden h-full w-px bg-gradient-to-b from-lavender via-electric to-transparent shadow-[0_0_14px_rgba(146,117,216,0.5)] sm:left-1/2 sm:block sm:-translate-x-1/2"
+          className="timeline-glow absolute left-3 top-0 hidden h-full w-px bg-gradient-to-b from-lavender via-electric to-transparent shadow-[0_0_14px_rgba(168,85,247,0.45)] sm:left-1/2 sm:block sm:-translate-x-1/2"
         />
         <ol className="space-y-6 sm:space-y-10">
           {journeySteps.map((step, i) => {
@@ -41,7 +41,7 @@ export function Journey() {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20, delay: reduce ? 0 : i * 0.12 }}
-                  className="absolute left-3 top-8 hidden h-3 w-3 -translate-x-1/2 rounded-full border-2 border-lavender bg-midnight shadow-[0_0_16px_rgba(146,117,216,0.7)] sm:left-1/2 sm:block"
+                  className="absolute left-3 top-8 hidden h-3 w-3 -translate-x-1/2 rounded-full border-2 border-lavender bg-midnight shadow-[0_0_16px_rgba(168,85,247,0.6)] sm:left-1/2 sm:block"
                 />
               </li>
             )

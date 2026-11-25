@@ -129,7 +129,7 @@ export function Navbar({ activeId }: { activeId: string }) {
                   >
                     {labels[item.id] ?? item.label}
                     {activeId === item.id ? (
-                      <span className="h-1.5 w-1.5 rounded-full bg-electric shadow-[0_0_12px_rgba(85,140,255,0.7)]" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-electric shadow-[0_0_12px_rgba(168,85,247,0.7)]" />
                     ) : (
                       <ArrowUpRight className="h-4 w-4 text-lilac/30" aria-hidden />
                     )}

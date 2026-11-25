@@ -113,7 +113,7 @@ export function Projects() {
                   ? { duration: 0 }
                   : { type: 'spring', stiffness: 280, damping: 26, mass: 0.8 }
               }
-              className="glass relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border-lavender/30 p-6 shadow-[0_35px_100px_-30px_rgba(146,117,216,0.5)] sm:p-9"
+              className="glass relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border-lavender/30 p-6 shadow-[0_35px_100px_-30px_rgba(124,58,237,0.35)] sm:p-9"
               onClick={(e) => e.stopPropagation()}
               role="dialog"
               aria-modal="true"

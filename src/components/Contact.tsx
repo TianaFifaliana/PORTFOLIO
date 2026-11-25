@@ -30,7 +30,7 @@ export function Contact() {
       }
       className="bg-midnight pb-16 sm:pb-20"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-96 bg-[radial-gradient(ellipse_at_bottom,rgba(146,117,216,0.12),transparent_70%)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-96 bg-[radial-gradient(ellipse_at_bottom,rgba(168,85,247,0.16),transparent_70%)]" />
       <div className="relative grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
         <Reveal className="grid gap-6">
           <div className="relative rounded-2xl bg-gradient-to-br from-lavender/45 via-electric/15 to-transparent p-px">

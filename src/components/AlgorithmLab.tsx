@@ -36,7 +36,7 @@ export function AlgorithmLab() {
           sont testées à travers les contraintes, la stratégie et l’itération.
         </p>
       }
-      className="overflow-hidden bg-[#0D1020]"
+      className="overflow-hidden bg-[#0E0E0E]"
     >
       <div aria-hidden className="lab-grid pointer-events-none absolute inset-0" />
       <div className="relative grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
@@ -63,7 +63,7 @@ export function AlgorithmLab() {
                       <motion.span
                         layoutId="lab-active"
                         transition={{ type: 'spring', stiffness: 360, damping: 30 }}
-                        className="absolute inset-0 rounded-xl border border-lavender/40 border-l-2 border-l-lavender bg-deep/85 shadow-[inset_0_0_30px_rgba(146,117,216,0.08)]"
+                        className="absolute inset-0 rounded-xl border border-lavender/40 border-l-2 border-l-lavender bg-deep/85 shadow-[inset_0_0_30px_rgba(168,85,247,0.12)]"
                       />
                     )}
                     <div className="relative">
@@ -73,7 +73,7 @@ export function AlgorithmLab() {
                     <motion.span
                       animate={reduce ? undefined : selected ? { scale: [1, 1.5, 1], opacity: [1, 0.6, 1] } : { scale: 1 }}
                       transition={{ duration: 2, repeat: selected && !reduce ? Infinity : 0, ease: 'easeInOut' }}
-                      className={`relative mt-1.5 h-1.5 w-1.5 rounded-full ${selected ? 'bg-electric shadow-[0_0_10px_rgba(85,140,255,0.8)]' : 'bg-lilac/25 group-hover:bg-lavender/60'}`}
+                      className={`relative mt-1.5 h-1.5 w-1.5 rounded-full ${selected ? 'bg-electric shadow-[0_0_10px_rgba(168,85,247,0.7)]' : 'bg-lilac/25 group-hover:bg-lavender/60'}`}
                     />
                   </button>
                 </li>
@@ -112,7 +112,7 @@ export function AlgorithmLab() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-2xl border border-electric/20 bg-[#0A0D19] p-5 font-mono text-[12px] text-silver/70 sm:text-[13px]">
+            <div className="rounded-2xl border border-electric/20 bg-[#080808] p-5 font-mono text-[12px] text-silver/70 sm:text-[13px]">
               <div className="mb-4 flex items-center justify-between border-b border-electric/15 pb-3">
                 <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] text-muted uppercase">
                   <Binary className="h-4 w-4 text-electric" /> terminal
