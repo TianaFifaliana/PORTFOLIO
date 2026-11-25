@@ -46,7 +46,7 @@ export function Section({
                 {eyebrow}
               </motion.p>
             )}
-            <h2 className="font-display text-4xl leading-[1.06] font-medium tracking-[-0.04em] text-silver sm:text-5xl lg:text-6xl">
+            <h2 className="page-title font-display text-4xl leading-[1.06] font-medium tracking-[-0.04em] text-silver sm:text-5xl lg:text-6xl">
               {title}
             </h2>
           </div>

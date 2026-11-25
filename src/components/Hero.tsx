@@ -49,7 +49,7 @@ export function Hero() {
             Bonjour, je suis
           </motion.p>
 
-          <motion.h1 variants={item} className="mt-6 font-display text-[clamp(2.6rem,7vw,5.15rem)] leading-[1.02] font-semibold tracking-[-0.055em] text-silver">
+          <motion.h1 variants={item} className="page-title mt-6 font-display text-[clamp(2.6rem,7vw,5.15rem)] leading-[1.02] font-semibold tracking-[-0.055em] text-silver">
             <span className="block overflow-hidden pb-1">
               <motion.span variants={line} className="block">RAKOTOARIZAO</motion.span>
             </span>
@@ -78,7 +78,7 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lavender/60 motion-reduce:hidden" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-electric" />
               </span>
-              <span className="font-mono text-[10px] tracking-[0.18em] text-lilac/85 uppercase">Disponible de suite</span>
+              <span className="font-mono text-[10px] tracking-[0.18em] text-lilac/85 uppercase">Disponible à partir de 21 Décembre 2026</span>
             </span>
           </motion.div>
 
@@ -109,7 +109,7 @@ export function Hero() {
               href="#contact"
               whileHover={reduce ? undefined : { y: -3 }}
               whileTap={reduce ? undefined : { scale: 0.98 }}
-              className="quiet-link inline-flex items-center gap-3 rounded-full border border-lilac/20 bg-white/[0.02] px-6 py-4 text-sm font-medium text-silver hover:border-electric hover:text-lilac"
+              className="quiet-link inline-flex items-center gap-3 rounded-full border border-lilac/20 bg-silver/[0.02] px-6 py-4 text-sm font-medium text-silver hover:border-electric hover:text-lilac"
             >
               Me contacter
             </motion.a>
@@ -150,7 +150,7 @@ export function Hero() {
                   if (!next) void videoRef.current?.play()
                 }}
                 aria-label={muted ? 'Activer le son de la vidéo' : 'Couper le son de la vidéo'}
-                className="absolute top-3 right-3 z-10 rounded-full border border-lilac/25 bg-midnight/75 p-2 text-lilac backdrop-blur-md transition-colors hover:border-lavender hover:text-white"
+                className="absolute top-3 right-3 z-10 rounded-full border border-lilac/25 bg-midnight/75 p-2 text-lilac backdrop-blur-md transition-colors hover:border-lavender hover:text-silver"
               >
                 {muted ? <VolumeX size={14} /> : <Volume2 size={14} />}
               </button>

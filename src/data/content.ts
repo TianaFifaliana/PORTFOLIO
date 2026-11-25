@@ -1,4 +1,6 @@
 ﻿import cvFile from '../assets/CV_Rakotoarizao_Tiana_Fifaliana.pdf.pdf?url'
+import appTextileVideo from '../assets/AppTextile.mp4'
+import deliveryVideo from '../assets/AppLivraison.mp4'
 
 export const cvUrl = cvFile
 export const cvFileName = 'CV_Rakotoarizao_Tiana_Fifaliana.pdf'
@@ -11,6 +13,7 @@ export type Project = {
   tags: string[]
   github?: string
   accent: string
+  video?: string
 }
 
 export const navItems = [
@@ -18,7 +21,6 @@ export const navItems = [
   { id: 'about', label: 'À propos' },
   { id: 'stack', label: 'Compétences' },
   { id: 'projects', label: 'Projets' },
-  { id: 'lab', label: 'Labo d’algorithmes' },
   { id: 'journey', label: 'Parcours' },
   { id: 'contact', label: 'Contact' },
 ] as const
@@ -33,11 +35,6 @@ export const stackGroups = [
     title: 'Back-end',
     note: 'Logique applicative, API et fondations côté serveur.',
     items: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'Django', 'Flask'],
-  },
-  {
-    title: 'Mobile',
-    note: 'Exploration de produits multiplateformes.',
-    items: ['React Native', 'Flutter'],
   },
   {
     title: 'Bases de données',
@@ -71,6 +68,7 @@ export const projects: Project[] = [
       'Espace provisoire pour les détails du projet AppTextile. Ajoutez ici les objectifs, responsabilités et résultats confirmés sans inventer de fonctionnalités.',
     tags: [],
     accent: 'from-electric/30 via-electric/5 to-transparent',
+    video: appTextileVideo,
   },
   {
     id: 'pharmagest',
@@ -80,7 +78,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet PharmaGest. Documentez les fonctionnalités, le rôle et les choix techniques vérifiés dès qu’ils seront disponibles.',
     tags: [],
-    accent: 'from-white/12 via-white/5 to-transparent',
+    accent: 'from-lilac/14 via-lavender/5 to-transparent',
   },
   {
     id: 'delivery-app',
@@ -90,7 +88,8 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails de l’application de livraison. Remplacez ce texte par les parcours, contributions et résultats confirmés.',
     tags: [],
-    accent: 'from-white/15 via-white/5 to-transparent',
+    accent: 'from-electric/14 via-lavender/5 to-transparent',
+    video: deliveryVideo,
   },
   {
     id: 'apprencontre',
@@ -100,7 +99,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet AppRencontre. Ajoutez ici le contexte produit vérifié et les points forts de la réalisation.',
     tags: [],
-    accent: 'from-white/10 via-white/5 to-transparent',
+    accent: 'from-lavender/12 via-electric/5 to-transparent',
   },
   {
     id: 'smartfokontany',
@@ -110,7 +109,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet SmartFokontany. Précisez les objectifs, les parties prenantes et le périmètre de la solution dès validation.',
     tags: [],
-    accent: 'from-white/15 via-white/5 to-transparent',
+    accent: 'from-electric/14 via-lavender/5 to-transparent',
   },
   {
     id: 'tantsahaconnect',
@@ -120,7 +119,7 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet TantsahaConnect. Ajoutez les cas d’usage vérifiés, les notes d’architecture et l’impact après confirmation.',
     tags: [],
-    accent: 'from-white/10 via-white/5 to-transparent',
+    accent: 'from-lavender/12 via-electric/5 to-transparent',
   },
   {
     id: 'reservsalle',
@@ -130,48 +129,11 @@ export const projects: Project[] = [
     details:
       'Espace provisoire pour les détails du projet ReservSalle. Remplacez ce texte par les besoins validés, les détails d’implémentation et les résultats.',
     tags: [],
-    accent: 'from-white/15 via-white/5 to-transparent',
+    accent: 'from-electric/14 via-lavender/5 to-transparent',
   },
 ]
 
-export const labTracks = [
-  {
-    title: 'Compétitions d’algorithmes',
-    description:
-      'Résolution de problèmes chronométrée sous contraintes, avec une attention portée à la clarté, à la rapidité et à l’exactitude.',
-    signal: 'contest.mode',
-  },
-  {
-    title: 'Défis logiques',
-    description:
-      'Exercices de raisonnement structuré qui affinent la décomposition des problèmes et la prise en compte des cas limites.',
-    signal: 'logic.trace',
-  },
-  {
-    title: 'Bots stratégiques',
-    description:
-      'Expériences de prise de décision où les règles, les heuristiques et l’évaluation des états comptent.',
-    signal: 'agent.strategy',
-  },
-  {
-    title: 'Jeux',
-    description:
-      'Systèmes interactifs qui transforment mécaniques et contraintes en logique jouable.',
-    signal: 'play.loop',
-  },
-  {
-    title: 'Optimisation',
-    description:
-      'Affinage des approches pour plus d’efficacité, d’évolutivité et une meilleure utilisation des ressources.',
-    signal: 'perf.tune',
-  },
-  {
-    title: 'Expériences de résolution de problèmes',
-    description:
-      'Explorations itératives des algorithmes, des structures de données et des compromis d’implémentation.',
-    signal: 'experiment.log',
-  },
-]
+
 
 export const journeySteps = [
   {

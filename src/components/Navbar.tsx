@@ -2,23 +2,28 @@
 import { ArrowUpRight, Download, Menu, X } from 'lucide-react'
 import { motion, AnimatePresence, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { cvFileName, cvUrl, navItems } from '../data/content'
+import { ThemeToggle } from './ThemeToggle'
 
 const labels: Record<string, string> = {
   home: 'Accueil',
   about: 'À propos',
   stack: 'Compétences',
   projects: 'Projets',
-  lab: 'Labo d’algorithmes',
   journey: 'Parcours',
   contact: 'Contact',
 }
 
-export function Navbar({ activeId }: { activeId: string }) {
+export function Navbar({ activeId, onNavigate }: { activeId: string; onNavigate: (id: string) => void }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const reduce = useReducedMotion()
   const { scrollYProgress } = useScroll()
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 })
+
+  const goTo = (id: string) => {
+    onNavigate(id)
+    if (open) window.setTimeout(() => setOpen(false), reduce ? 0 : 260)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -46,14 +51,20 @@ export function Navbar({ activeId }: { activeId: string }) {
         className="absolute inset-x-0 top-0 h-px origin-left bg-gradient-to-r from-lavender via-electric to-lilac"
       />
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 sm:px-6 lg:px-10">
-        <a href="#home" className="group flex items-baseline gap-2.5" aria-label="Retour à l'accueil">
+        <motion.a
+          href="#home"
+          onClick={() => goTo('home')}
+          whileTap={reduce ? undefined : { scale: 0.94 }}
+          className="group flex items-baseline gap-2.5"
+          aria-label="Retour à l'accueil"
+        >
           <span className="font-display text-2xl leading-none font-semibold tracking-tight text-silver">
             TF<span className="shimmer-text">.</span>
           </span>
           <span className="hidden font-mono text-[10px] tracking-[0.18em] text-muted uppercase transition-colors group-hover:text-lilac sm:block">
             Tiana Fifaliana
           </span>
-        </a>
+        </motion.a>
 
         <ul className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => {
@@ -62,13 +73,15 @@ export function Navbar({ activeId }: { activeId: string }) {
               <li key={item.id}>
                 <motion.a
                   href={`#${item.id}`}
+                  onClick={() => goTo(item.id)}
                   whileHover={reduce ? undefined : { y: -2 }}
+                  whileTap={reduce ? undefined : { scale: 0.94 }}
                   className={`quiet-link relative py-2 text-[12px] font-medium tracking-wide ${active ? 'text-lilac' : 'text-muted hover:text-silver'}`}
                 >
                   {labels[item.id] ?? item.label}
                   {active && (
                     <motion.span
-                      layoutId="nav-active"
+                      layoutId={reduce ? undefined : 'nav-active-underline'}
                       className="absolute -bottom-0.5 left-0 h-px w-full bg-gradient-to-r from-lavender to-electric"
                     />
                   )}
@@ -79,6 +92,7 @@ export function Navbar({ activeId }: { activeId: string }) {
         </ul>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <a
             href={cvUrl}
             download={cvFileName}
@@ -121,15 +135,19 @@ export function Navbar({ activeId }: { activeId: string }) {
                 >
                   <motion.a
                     href={`#${item.id}`}
-                    onClick={() => setOpen(false)}
+                    onClick={() => goTo(item.id)}
                     whileHover={reduce ? undefined : { x: 6 }}
+                    whileTap={reduce ? undefined : { scale: 0.97 }}
                     className={`flex items-center justify-between py-4 font-display text-2xl tracking-tight ${
                       activeId === item.id ? 'text-lavender' : 'text-silver'
                     }`}
                   >
                     {labels[item.id] ?? item.label}
                     {activeId === item.id ? (
-                      <span className="h-1.5 w-1.5 rounded-full bg-electric shadow-[0_0_12px_rgba(168,85,247,0.7)]" />
+                      <motion.span
+                        layoutId={reduce ? undefined : 'nav-active-dot'}
+                        className="h-1.5 w-1.5 rounded-full bg-electric shadow-[0_0_12px_rgba(168,85,247,0.7)]"
+                      />
                     ) : (
                       <ArrowUpRight className="h-4 w-4 text-lilac/30" aria-hidden />
                     )}
